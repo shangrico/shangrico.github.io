@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shangri Lawn - Premium Lawn Aeration Services | South Denver Metro</title>
-    <meta name="description" content="Professional lawn aeration, fertilization, and overseeding services in Highlands Ranch, Parker, and South Denver Metro. Spring Special: $150 for all three services!">
+    <meta name="description" content="Professional lawn aeration, fertilization, and overseeding services in Highlands Ranch, Parker, and South Denver Metro. Fall Special: $150 for all three services!">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -16,11 +16,11 @@
         }
 
         :root {
-            --primary-green: #2d5016;
-            --accent-green: #4a7c30;
-            --light-green: #6fa84d;
-            --cream: #faf8f3;
-            --warm-white: #fffef9;
+            --primary-green: #0a7c2f;
+            --accent-green: #0e8d36;
+            --light-green: #2ba84a;
+            --cream: #e9ebe6;
+            --warm-white: #f2f3f0;
             --earth: #8b7355;
             --gold: #d4af37;
             --text-dark: #1a1a1a;
@@ -71,6 +71,17 @@
             font-weight: 700;
             color: white;
             letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            object-fit: cover;
         }
 
         .hero {
@@ -127,21 +138,6 @@
                 opacity: 1;
                 transform: translateY(0);
             }
-        }
-
-        .special-badge {
-            display: inline-block;
-            background: var(--gold);
-            color: var(--primary-green);
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-            animation: fadeInUp 0.8s ease-out 0.3s both;
         }
 
         .hero h1 {
@@ -644,7 +640,10 @@
 <body>
     <header class="header">
         <div class="header-content">
-            <div class="logo">Shangri Lawn</div>
+            <div class="logo">
+                <img src="logo.png" class="logo-icon" alt="Shangri Lawn logo">
+                Shangri Lawn
+            </div>
         </div>
     </header>
 
@@ -654,15 +653,14 @@
 
     <section class="hero">
         <div class="hero-content">
-            <div class="special-badge">🌱 Limited Time Spring Special</div>
-            <h1>The Spring Special</h1>
-            <p class="hero-subtitle">Prepare your lawn for the growing season with our comprehensive three-step treatment package.</p>
+            <h1>The Fall Special</h1>
+            <p class="hero-subtitle">Cool air and still-warm soil make autumn the best growing window of the year. Now is when the work pays off.</p>
             
             <div class="offer-box">
-                <h3>Complete Lawn Rejuvenation Package</h3>
+                <h3>Complete Fall Lawn Package</h3>
                 <ul class="offer-items">
                     <li>Deep Plug Aeration</li>
-                    <li>Spring Fertilizer</li>
+                    <li>Winter Fertilizer</li>
                     <li>Premium Overseeding</li>
                 </ul>
                 
@@ -690,7 +688,7 @@
 
     <section class="section">
         <h2 class="section-title">3 Steps to a Lush, Healthy Lawn</h2>
-        <p class="section-subtitle">Our proven process delivers professional results that transform your outdoor space into the envy of the neighborhood.</p>
+        <p class="section-subtitle">Fall is the single best time of year for aeration and seeding. Our three-step process does the work now so your lawn wakes up thick and green in the spring.</p>
         
         <div class="services-grid">
             <div class="service-card">
@@ -705,7 +703,7 @@
                 <img src="https://img1.wsimg.com/isteam/ip/a1b3472a-2f33-49e8-9c5e-2d3378edbfa4/lawn-fertilization-1.webp/:/cr=t:2.78%25,l:0%25,w:100%25,h:94.44%25/rs=w:600,h:300,cg:true" alt="Organic Fertilizer" class="service-image">
                 <div class="service-content">
                     <h3>Organic Fertilizer</h3>
-                    <p>Our premium organic fertilizer is crafted from natural ingredients, making it completely safe for pets, children, and the environment. Its slow-release formula provides sustained nutrition throughout the growing season, promoting deep root development and vibrant green growth.</p>
+                    <p>Our premium organic fertilizer is crafted from natural ingredients, making it completely safe for pets, children, and the environment. Its slow-release formula provides sustained nutrition through the cold months, building deep, strong roots that fuel an early green-up next spring.</p>
                 </div>
             </div>
 
@@ -713,7 +711,7 @@
                 <img src="https://img1.wsimg.com/isteam/ip/a1b3472a-2f33-49e8-9c5e-2d3378edbfa4/2021-08-overseeding-feeding-lawn-b-1200x800.webp/:/cr=t:12.5%25,l:0%25,w:100%25,h:75%25/rs=w:600,h:300,cg:true" alt="Professional Overseeding" class="service-image">
                 <div class="service-content">
                     <h3>Premium Overseeding</h3>
-                    <p>We strategically distribute high-quality grass seed across your entire lawn to fill in thin spots and increase turf density. Spring conditions provide ideal moisture and temperature for rapid germination, resulting in a thick, lush lawn that naturally crowds out weeds.</p>
+                    <p>We strategically distribute high-quality grass seed across your entire lawn to fill in thin spots and increase turf density. Fall is the best time of year to seed — warm soil and cool air give new grass a head start before winter, resulting in a thick, lush lawn that naturally crowds out weeds.</p>
                 </div>
             </div>
         </div>
@@ -722,8 +720,8 @@
     <section class="contact-section" id="contact">
         <div class="contact-wrapper">
             <div class="contact-info">
-                <h2>Transform Your Lawn This Spring</h2>
-                <p>Ready to give your lawn the professional care it deserves? Get a free quote and schedule your service today. Our expert team serves the entire South Denver Metro area with reliable, high-quality lawn care.</p>
+                <h2>Get Your Lawn Winter-Ready</h2>
+                <p>Fall booking fills up fast, so don't wait. Get a free quote and schedule your service today. Our expert team serves the entire South Denver Metro area with reliable, high-quality lawn care.</p>
                 
                 <div class="contact-details">
                     <h3>Call or Text</h3>
@@ -786,8 +784,8 @@
                         <label for="service">Service Interested In</label>
                         <select id="service" name="service">
                             <option value="">Select service...</option>
-                            <option value="spring-special">Spring Special Package</option>
-                            <option value="spring-double">Spring Special (Double Overseed)</option>
+                            <option value="fall-special">Fall Special Package</option>
+                            <option value="fall-double">Fall Special (Double Overseed)</option>
                             <option value="aeration-only">Aeration Only</option>
                             <option value="custom">Custom Quote</option>
                         </select>
