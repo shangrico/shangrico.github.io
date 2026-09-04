@@ -176,90 +176,117 @@
             margin-bottom: 1.5rem;
         }
 
-        .offer-items {
-            list-style: none;
-            margin-bottom: 1.5rem;
+        .pricing-note {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: #8a8a8a;
+            letter-spacing: 0;
+            white-space: nowrap;
         }
 
-        .offer-items li {
-            padding: 0.75rem 0;
-            padding-left: 2rem;
-            position: relative;
-            font-size: 1.1rem;
-            color: var(--text-medium);
+        .pricing-note::before {
+            content: '\00b7';
+            margin: 0 0.5rem;
+            color: #c0c4bb;
         }
 
-        .offer-items li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--light-green);
-            font-weight: bold;
-            font-size: 1.3rem;
+        .price-ladder {
+            margin: 1.5rem 0 0.5rem;
         }
 
-        .price-highlight {
+        .tier {
             display: flex;
+            justify-content: space-between;
             align-items: baseline;
             gap: 1rem;
-            margin: 2rem 0;
-            padding: 1.5rem;
-            background: linear-gradient(135deg, var(--cream) 0%, var(--warm-white) 100%);
-            border-radius: 12px;
-            border: 2px solid var(--gold);
+            padding: 0.9rem 0;
+            border-bottom: 1px solid #dcdfd8;
         }
 
-        .price-highlight .price {
+        .tier:last-of-type {
+            border-bottom: none;
+        }
+
+        .tier .tier-name {
+            font-size: 1.05rem;
+            color: var(--text-medium);
+            font-weight: 500;
+        }
+
+        .tier .tier-note {
+            display: block;
+            font-size: 0.85rem;
+            color: #8a8a8a;
+            font-weight: 400;
+            margin-top: 0.15rem;
+        }
+
+        .tier .tier-price {
             font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: var(--text-medium);
+            white-space: nowrap;
+        }
+
+        .tier-highlight {
+            background: linear-gradient(135deg, var(--cream) 0%, #f7f8f5 100%);
+            border: 2px solid var(--accent-green);
+            border-radius: 14px;
+            padding: 1.25rem 1.4rem;
+            margin-top: 1.25rem;
+        }
+
+        .tier-highlight-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 1rem;
+        }
+
+        .tier-highlight .tier-name {
+            font-size: 1.15rem;
             font-weight: 700;
             color: var(--primary-green);
-            line-height: 1;
         }
 
-        .price-highlight .label {
+        .tier-highlight .tier-note {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: var(--text-medium);
+            margin-top: 0.2rem;
+        }
+
+        .tier-highlight .tier-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.1rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            white-space: nowrap;
+        }
+
+        .tier-highlight-foot {
+            margin-top: 0.9rem;
+            padding-top: 0.8rem;
+            border-top: 1px dashed #c9cfc4;
             font-size: 0.9rem;
             color: var(--text-medium);
-            text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
-        .double-option {
-            font-size: 1rem;
-            color: var(--text-medium);
-            padding: 1rem;
-            background: var(--cream);
-            border-radius: 8px;
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-
-        .double-option strong {
+        .tier-highlight-foot strong {
             color: var(--accent-green);
-            font-size: 1.3rem;
+            font-weight: 600;
         }
 
         .best-deal {
             text-align: center;
             font-style: italic;
-            color: var(--gold);
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-
-        .aeration-only-price {
-            margin-top: 1.5rem;
-            padding: 1rem;
-            background: linear-gradient(135deg, rgba(74, 124, 48, 0.1) 0%, rgba(111, 168, 77, 0.1) 100%);
-            border-left: 4px solid var(--accent-green);
-            border-radius: 8px;
-            font-size: 0.95rem;
-            color: var(--text-medium);
-        }
-
-        .aeration-only-price strong {
             color: var(--accent-green);
-            font-size: 1.1rem;
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin-top: 1.25rem;
         }
 
         .cta-button {
@@ -623,8 +650,26 @@
                 padding: 2rem 1.5rem;
             }
 
-            .price-highlight .price {
-                font-size: 2.5rem;
+            .pricing-note {
+                display: block;
+                margin-top: 0.35rem;
+            }
+
+            .pricing-note::before {
+                content: none;
+            }
+
+            .tier-highlight {
+                padding: 1.15rem 1.2rem;
+            }
+
+            .tier-highlight-row {
+                flex-direction: column;
+                gap: 0.4rem;
+            }
+
+            .tier {
+                gap: 0.75rem;
             }
 
             .contact-form {
@@ -653,33 +698,41 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1>The Fall Special</h1>
-            <p class="hero-subtitle">Cool air and still-warm soil make autumn the best growing window of the year. Now is when the work pays off.</p>
+            <h1>On Demand Lawn Aeration</h1>
+            <p class="hero-subtitle">After a dry Colorado summer, hard-packed soil sheds water instead of soaking it in. Aeration opens it back up so every drop reaches the roots. Pick the day that works for you and we&rsquo;ll be there.</p>
             
             <div class="offer-box">
-                <h3>Complete Fall Lawn Package</h3>
-                <ul class="offer-items">
-                    <li>Deep Plug Aeration</li>
-                    <li>Winter Fertilizer</li>
-                    <li>Premium Overseeding</li>
-                </ul>
-                
-                <div class="price-highlight">
-                    <div>
-                        <div class="price">$150</div>
-                        <div class="label">All Three Services</div>
+                <h3>Fall Pricing <span class="pricing-note">Average size lawns</span></h3>
+
+                <div class="price-ladder">
+                    <div class="tier">
+                        <span class="tier-name">Lawn Aeration</span>
+                        <span class="tier-price">$50</span>
+                    </div>
+
+                    <div class="tier-highlight">
+                        <div class="tier-highlight-row">
+                            <span class="tier-name">Aeration + Winterizer
+                                <span class="tier-note">Deep plug aeration plus winter fertilizer</span>
+                            </span>
+                            <span class="tier-price">$80</span>
+                        </div>
+                    </div>
+
+                    <div class="tier-highlight">
+                        <div class="tier-highlight-row">
+                            <span class="tier-name">The Fall Special
+                                <span class="tier-note">Aeration + Winterizer + Overseed</span>
+                            </span>
+                            <span class="tier-price">$140</span>
+                        </div>
+                        <div class="tier-highlight-foot">
+                            Add <strong>Double Overseed</strong> for <strong>$200</strong>
+                        </div>
                     </div>
                 </div>
 
-                <div class="double-option">
-                    Upgrade to <strong>Double Overseed</strong> for just <strong>$200</strong>
-                </div>
-
-                <p class="best-deal">✨ The Best Deal in Denver ✨</p>
-
-                <div class="aeration-only-price">
-                    <strong>Aeration Only</strong> starting at <strong>$50</strong> (smaller/average lawns)
-                </div>
+                <p class="best-deal">The best deal in Denver</p>
 
                 <a href="#contact" class="cta-button">Schedule Your Service</a>
             </div>
@@ -721,7 +774,7 @@
         <div class="contact-wrapper">
             <div class="contact-info">
                 <h2>Get Your Lawn Winter-Ready</h2>
-                <p>Fall booking fills up fast, so don't wait. Get a free quote and schedule your service today. Our expert team serves the entire South Denver Metro area with reliable, high-quality lawn care.</p>
+                <p>On-demand aeration. Get a free quote and pick a day to aerate this fall. Our expert team serves the entire South Denver Metro area with reliable, high-quality lawn care.</p>
                 
                 <div class="contact-details">
                     <h3>Call or Text</h3>
@@ -784,9 +837,10 @@
                         <label for="service">Service Interested In</label>
                         <select id="service" name="service">
                             <option value="">Select service...</option>
-                            <option value="fall-special">Fall Special Package</option>
-                            <option value="fall-double">Fall Special (Double Overseed)</option>
-                            <option value="aeration-only">Aeration Only</option>
+                            <option value="aeration-only">Lawn Aeration ($50)</option>
+                            <option value="aeration-winterizer">Aeration + Winterizer ($80)</option>
+                            <option value="fall-special">Fall Special &mdash; with Overseed ($140)</option>
+                            <option value="fall-double">Fall Special + Double Overseed ($200)</option>
                             <option value="custom">Custom Quote</option>
                         </select>
                     </div>
@@ -794,7 +848,7 @@
 
                 <div class="form-group">
                     <label for="message">Additional Notes (Optional)</label>
-                    <textarea id="message" name="message" placeholder="Tell us about any specific concerns or questions..."></textarea>
+                    <textarea id="message" name="message" placeholder="Tell us your preferred day to aerate..."></textarea>
                 </div>
 
                 <button type="submit" class="submit-button">Get My Free Quote</button>
